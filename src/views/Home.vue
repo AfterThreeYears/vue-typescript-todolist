@@ -18,6 +18,6 @@ import TodoItem from '@/components/TodoItem.vue';
   },
 })
 export default class Home extends Vue {
-  todos: Object[] = [];
+  public todos: Object[] = [];
 }
 </script>
