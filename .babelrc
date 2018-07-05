@@ -1,0 +1,10 @@
+{
+  "comments": false,
+  "env": {
+    "server": {
+      "plugins": [
+        "transform-decorators-legacy"
+      ]
+    }
+  }
+}

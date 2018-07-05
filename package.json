@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "dev": "BABEL_ENV=server nodemon ./test.js --watch ./ --exec babel-node"
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -25,9 +26,12 @@
     "@vue/cli-plugin-unit-mocha": "^3.0.0-rc.3",
     "@vue/cli-service": "^3.0.0-rc.3",
     "@vue/test-utils": "^1.0.0-beta.16",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "chai": "^4.1.2",
     "lint-staged": "^6.0.0",
     "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.16"
   },

@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <todo-item
+      v-for="(todo, index) in todos"
+      :key="index"
+      :todo="todo"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import TodoItem from '@/components/TodoItem.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    TodoItem,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  todos: Object[] = [];
+}
 </script>
